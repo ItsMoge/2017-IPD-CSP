@@ -165,7 +165,6 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
     elif player == 2:
         trust = 0
         hatred = 0
-        size = len(opponent_history)
         if getting_team_name:
             return 'The Heralds of Danny Devito'
         else:
@@ -183,7 +182,7 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
             elif len(opponent_history) < 4:
                 return 'b'    
             elif opponent_history > 0 == 'b':
-                hatred= 1 + hatred
+                hatred= hatred + 1
                 trust = trust - 1
             elif opponent_history > 0 == 'c':
                 trust = trust + 1
